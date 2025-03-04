@@ -22,7 +22,7 @@ The included custom action for WiX is based on the .NET Framework 3.0 which is a
 ##### .NET
 
     var uninstallInfo = UninstallInfo.Find("Application Name");
-    if (uninstallInfo == null)
+    if (uninstallInfo != null)
     {
         var uninstaller = new Uninstaller();
         uninstaller.Uninstall(uninstallInfo);
